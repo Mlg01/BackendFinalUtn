@@ -8,9 +8,9 @@ import turnosRoutes from "./routes/turnos.routes.js";
 const app = express();
 
 const corsOptions ={
-    accessControlAllowOrigin: 'https://aesthetic-vacherin-41d63e.netlify.app',
-    credentials:true,           //access-control-allow-credentials:true
-    optionSuccessStatus:200
+    accessControlAllowOrigin: *
+    //credentials:true,           //access-control-allow-credentials:true
+    //optionSuccessStatus:200
 }
 app.use(cors(corsOptions));
 
