@@ -4,7 +4,7 @@ import {
     DB_USER,
     DB_DATABASE,
     DB_PORT
-}from './config'
+}from './config.js'
 
 import { createPool } from 'mysql2/promise'
 

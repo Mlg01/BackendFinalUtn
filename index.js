@@ -1,7 +1,5 @@
 import express from "express";
 import cors from "cors";
-import {dirname, join} from 'path'
-import {fileURLToPath} from 'url'
 import { PORT } from "./config.js";
 
 import indexRoutes from "./routes/index.routes.js";
