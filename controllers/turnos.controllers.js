@@ -1,7 +1,7 @@
 import { pool } from "../db.js";
 
 export const getTurnos = async (req, res) => {
-  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Origin', 'https://aesthetic-vacherin-41d63e.netlify.app');
   try {
     const [result] = await pool.query(
       "SELECT * FROM turnos ORDER BY createAt ASC"
@@ -13,7 +13,7 @@ export const getTurnos = async (req, res) => {
 };
 
 export const getTurno = async (req, res) => {
-  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Origin', 'https://aesthetic-vacherin-41d63e.netlify.app');
   try {
     const [result] = await pool.query("SELECT * FROM turnos WHERE id = ?", [
       req.params.id,
@@ -29,7 +29,7 @@ export const getTurno = async (req, res) => {
 };
 
 export const createTurno = async (req, res) => {
-  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Origin', 'https://aesthetic-vacherin-41d63e.netlify.app');
   try {
     const { nombre, telefono, description } = req.body;
     const [result] = await pool.query(
@@ -48,7 +48,7 @@ export const createTurno = async (req, res) => {
 };
 
 export const updateTurno = async (req, res) => {
-  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Origin', 'https://aesthetic-vacherin-41d63e.netlify.app');
   try {
     const result = await pool.query("UPDATE turnos SET ? WHERE id = ?", [
       req.body,
@@ -61,7 +61,7 @@ export const updateTurno = async (req, res) => {
 };
 
 export const deleteTurno = async (req, res) => {
-  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Origin', 'https://aesthetic-vacherin-41d63e.netlify.app');
   try {
     const [result] = await pool.query("DELETE FROM turnos WHERE id = ?", [
       req.params.id,
